@@ -19,13 +19,12 @@ options = {
 
 
 function app(req, res) {
+  console.log(req.connection.getPeerCertificate().modulus);
+  port = server.address().port;
   res.setHeader('Content-Type', 'text/plain');
   res.end('Hello, encrypted world!');
 }
 
 server = https.createServer(options, app).listen(port, function () {
-  port = server.address().port;
-  console.log('Listening on https://127.0.0.1:' + port);
-  console.log('Listening on https://' + server.address().address + ':' + port);
-  console.log('Listening on https://local.foobar3000.com:' + port);
+  console.log('Listening on https://localhost:' + port);
 });

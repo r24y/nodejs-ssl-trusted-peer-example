@@ -1,5 +1,5 @@
 #!/bin/bash
-FQDN='local.foobar3000.com'
+FQDN='localhost'
 PORT=8043
 
 bash make-root-ca-and-certificates.sh "${FQDN}"
@@ -12,7 +12,7 @@ sleep 1
 
 echo ""
 echo ""
-node ./request-without-warnings.js "${FQDN}" "${PORT}" 
+node ./request.js "${FQDN}" "${PORT}"
 echo -n " - without warnings, love node.js' https"
 echo ""
 sleep 1
