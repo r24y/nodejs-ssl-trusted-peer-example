@@ -19,7 +19,7 @@ options = {
 
 
 function app(req, res) {
-  console.log(req.connection.getPeerCertificate().modulus);
+  console.log(req.connection.getPeerCertificate());
   port = server.address().port;
   res.setHeader('Content-Type', 'text/plain');
   res.end('Hello, encrypted world!');
