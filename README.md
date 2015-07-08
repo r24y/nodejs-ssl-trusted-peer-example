@@ -1,6 +1,14 @@
 nodejs-ssl-trusted-peer-example
 ===============================
 
+# tl;dr
+```
+git clone https://github.com/r24y/nodejs-ssl-trusted-peer-example
+cd nodejs-ssl-trusted-peer-example
+npm install
+bash test.sh
+```
+
 This is a working example of a trusted-peer setup using HTTPS / SSL.
 
 * You are your own Root Certificate Authority
